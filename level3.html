@@ -1,0 +1,383 @@
+<html>
+        <head>
+                <title>Level 3</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+                <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                <style>
+                     body{
+                    background-image: url("bg4.jpg");
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+z-index: -1;
+color: white;
+
+
+                    }
+                    div.a {
+                        margin: auto;
+                        width: 1100px;
+                        height: auto;
+                        border: 1px solid black;
+                        background-color:#f2f2f2;
+                        color: black;
+                        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                    }
+                    div.b {
+                        border: 1px solid black;
+
+                        padding: 5px;
+                        width: 400px;
+                        height: auto;
+                    }
+                    .clearfix {
+      overflow: auto;
+    }
+                    img {
+                        margin: 10px;
+                      float: left;
+					  border: 2px solid;
+					  border-radius: 10px;
+                        }
+
+                    h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+                    h4 {
+                        margin: 20px;
+                    }
+
+                    </style>
+                    <!--=================code for cookies ===============================-->
+                    <script>
+
+            function setCookie(cname,cvalue,exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays*24*60*60*1000));
+                var expires = "expires=" + d.toGMTString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function checkCookie() {
+                var user=getCookie("username");
+                if (user != "") {
+                    alert("Welcome again " + user);
+                } else {
+                   user = prompt("Please enter your E-mail id:","");
+                   if (user != "" && user != null) {
+                       setCookie("username", user, 30);
+                   }
+                }
+            }
+
+            </script>
+                    <!--=================code for cookies ends ===============================-->
+
+            </head>
+    <body>
+      <!--===================checking for cookie =================-->
+            <body onload="checkCookie()">
+      <!--===================checking for cookie ends=================-->
+        <h1 class="display-2" id="head"><center>Sensors</center></h1>
+        <div class="container">
+                <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8"><span class="pull-right">
+        <form method="post" id="buying">
+            <div class="form-group">
+             <label>Filter: </label>
+             <select id="filter" name="filter[]" multiple class="form-control" >
+              <option value="ABC">Proximity Sensor</option>
+              <option value="DEF">Weigh sensor</option>
+              <option value="GHI">Flex sensor</option>
+              <option value="JKL">UV Range Finder</option>
+              <option value="MNO">Motion Sensor</option>
+             </select>
+                <label>Sort By: </label>
+                <select id="sort" name="sort[]" multiple class="form-control" >
+                 <option value="Price: Lowest to highest">Price:lowest to highest</option>
+                 <option value="Price: Highest to lowest">Price:highest to lowest</option>
+                 <option value="Relevance">Relevance</option>
+                 <option value="Newly added">Newly added</option>
+                </select>
+               </div>
+            <div class="form-group">
+            <center><input type="submit" id="btn1" class="btn btn-info" name="submit" value="Apply" onclick="getOption()"/></center>
+            </div>
+           </form>
+        </span></div>
+        </div>
+        </div>
+        </div>
+          <strong> <h4>Filters appiled : <span id="demo"></span></h4>
+           <h4>Sort by : <span id="demo1"></span></h4></strong>
+
+
+
+           <div class="a">
+               <br>
+               <div class="row">
+                <div class="col-md-4">
+
+                <div class="clearfix">
+            <img  src="img/D-Sun Hc-Sr501 Pyroelectric Infrared Pir Motion Sensor Detector Module.jpg" alt="Product image" width="170" height="170">
+            <a href="#"><h5>Motion Sensor</h5></a>
+            One line description about the product.
+            <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+        </div>
+
+    </div>
+
+         <div class="col-md-4">
+
+            <div class="clearfix">
+                <img  src="img/Piezoelectric Sensor.jpg" alt="Product image" width="170" height="170">
+                <a href="#"><h5>Piezoelectric Sensor</h5></a>
+                One line description about the product.
+                <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+            </div>
+              </div>
+
+			<div class="col-md-4">
+
+            <div class="clearfix">
+                <img  src="img/REES52 Ultrasonic Range Finder Module Sensor Distance Measuring Transducer New.jpg" alt="Product image" width="170" height="170">
+                <a href="#"><h5>UV Range Finder</h5></a>
+                One line description about the product.
+                <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+            </div>
+              </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+
+    <div class="clearfix">
+<img  src="img/Robocraze Digital Load Cell Weight Sensor 10Kg Portable Electronic Scale + Hx711 Weighing Sensors Ad Module.jpg" alt="Product image" width="170" height="170">
+<a href="#"><h5>Weigh sensor</h5></a>
+One line description about the product.
+<strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/Robodo Electronics FSENS Flex Sensor 2.2 Inches.jpg" alt="Product image" width="170" height="170">
+   <a href="#"><h5>Flex Sensor</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/VEEROBOT Infrared (IR) Proximity Sensor Module.jpg" alt="Product image" width="170" height="170">
+    <a href="#"><h5>Proximity Semsor</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+
+    <div class="clearfix">
+<img  src="img/D-Sun Hc-Sr501 Pyroelectric Infrared Pir Motion Sensor Detector Module.jpg" alt="Product image" width="170" height="170">
+<a href="#"><h5>Motion Sensor</h5></a>
+One line description about the product.
+<strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/Piezoelectric Sensor.jpg" alt="Product image" width="170" height="170">
+   <a href="#"><h5>Piezoelectric Sensor</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/REES52 Ultrasonic Range Finder Module Sensor Distance Measuring Transducer New.jpg" alt="Product image" width="170" height="170">
+   <a href="#"><h5>UV Range Finder</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+
+    <div class="clearfix">
+<img  src="img/Robocraze Digital Load Cell Weight Sensor 10Kg Portable Electronic Scale + Hx711 Weighing Sensors Ad Module.jpg" alt="Product image" width="170" height="170">
+<a href="#"><h5>Weigh sensor</h5></a>
+One line description about the product.
+<strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/Robodo Electronics FSENS Flex Sensor 2.2 Inches.jpg" alt="Product image" width="170" height="170">
+   <a href="#"><h5>Flex Sensor</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/D-Sun Hc-Sr501 Pyroelectric Infrared Pir Motion Sensor Detector Module.jpg" alt="Product image" width="170" height="170">
+  <a href="#"><h5>Motion Sensor</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+
+    <div class="clearfix">
+<img  src="img/Piezoelectric Sensor.jpg" alt="Product image" width="170" height="170">
+<a href="#"><h5>Pizoelcetric Sensor</h5></a>
+One line description about the product.
+<strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/REES52 Ultrasonic Range Finder Module Sensor Distance Measuring Transducer New.jpg" alt="Product image" width="170" height="170">
+    <a href="#"><h5>UV Range Finder</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/Robocraze Digital Load Cell Weight Sensor 10Kg Portable Electronic Scale + Hx711 Weighing Sensors Ad Module.jpg" alt="Product image" width="170" height="170">
+    <a href="#"><h5>Weigh sensor</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+
+    <div class="clearfix">
+<img  src="img/VEEROBOT Infrared (IR) Proximity Sensor Module.jpg" alt="Product image" width="170" height="170">
+<a href="#"><h5>Proximity Sensor</h5></a>
+One line description about the product.
+<strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="img/VEEROBOT Infrared (IR) Proximity Sensor Module.jpg" alt="Product image" width="170" height="170">
+    <a href="#"><h5>Proximity Sensor</h5></a>
+    One line description about the product.
+    <strong><a href="https://www.amazon.in/s/ref=nb_sb_noss_1/259-9156297-9659022?url=search-alias%3Daps&field-keywords=electronic+sensors">Estimated Price</a></strong>
+</div>
+  </div>
+
+<div class="col-md-4">
+
+<div class="clearfix">
+    <img  src="#" alt="For Affiliate Marketers" width="170" height="170">
+    <a href="affiliate.html"><h5>Affiliate</h5></a>
+    kindly submit your information as an affiliate. we will get right back to you!
+</div>
+  </div>
+
+</div>
+<br>
+
+                                              </div>
+                                                    <br>
+           <center><button type="button"><a href="#head"><span class="glyphicon glyphicon-arrow-up"></span>Jump to Top</a></button></center>
+    <br>
+        </body>
+</html>
+<script>
+        $(document).ready(function(){
+         $('#filter').multiselect({
+          nonSelectedText: 'Select Filter',
+          includeSelectAllOption: true,
+          enableFiltering: true,
+          enableCaseInsensitiveFiltering: true,
+          buttonWidth:'150px'
+         });
+         $('#sort').multiselect({
+          nonSelectedText: 'Select Sorting criteria',
+          enableFiltering: true,
+          enableCaseInsensitiveFiltering: true,
+          buttonWidth:'150px'
+         });
+         $('#buying').submit(function(e) {
+
+    e.preventDefault();
+    var filter = $("#filter" ).serializeArray();
+    var sort = $("#sort" ).serializeArray();
+    $( "#demo" ).empty();
+    $( "#demo1" ).empty();
+    jQuery.each( filter, function( i, filter ) {
+      $( "#demo" ).append( filter.value + " " );
+    });
+    jQuery.each( sort, function( i, sort ) {
+      $( "#demo1" ).append( sort.value + " " );
+
+        });
+    });
+       });
+         </script>

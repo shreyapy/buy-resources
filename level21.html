@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Products | Life Style Store</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--=================code for cookies ===============================-->
+        <script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your E-mail id:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+</script>
+        <!--=================code for cookies ends ===============================-->
+
+    </head>
+
+    <body>
+
+      <!--===================checking for cookie =================-->
+            <body onload="checkCookie()">
+      <!--===================checking for cookie ends=================-->
+<!--********************* slider/ carousel section starts here**************************** -->
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li><!-- main slider/ carousel -->
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li><!-- first slide -->
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li><!-- second slider -->
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li><!-- third slider -->
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li><!-- fourth slider -->
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <!-- wrapper for active or main slider -->
+    <div class="item active">
+      <img src="img/intro-bg_1.jpg" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <!-- main slider ends -->
+    <!-- first slider starts -->
+    <div class="item">
+      <img src="img/198909.jpg" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <!-- first slider ends -->
+    <!-- second slider starts-->
+    <div class="item">
+      <img src="img/masteringTheVerticals-1-11.jpg" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <!-- second slider ends -->
+    <!-- third slider starts -->
+    <div class="item">
+      <img src="img/merchant-in-store-holding-tomatoes.jpg" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <!-- third sluder ends -->
+    <!-- fourth slider starts -->
+    <div class="item">
+      <img src="img/Loyal_Customers_v2.jpg" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <!-- fourth slider ends -->
+    ...
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- ******************slider section ends here ********************************** -->
+<!-- ****************** categories section ***************************** -->
+        <div class="container-fluid" style="background: linear-gradient(#f8c291, #ffffff);">
+          <div class="row text-center">
+            <a href="level3.html"><h2><strong><u>CATEGORIES</u></strong></h2><br></a>
+            <div class="col-sm-12">
+              <a  href="#" class="btn btn-success btn-lg active butten">bolts</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">screws</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">nuts</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">washers</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">U V bulbs</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">Rivets</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">Inserts</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">luminaries</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">pulviser</a>
+            </div>
+
+            <div class="col-sm-12">
+                <br>
+              <a  href="#" class="btn btn-success btn-lg active butten">hard disks</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">IC's</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">joysticks</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">scanners</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">LCR</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">rods</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">hammers</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">hinges</a>
+              <a  href="level3.html" class="btn btn-success btn-lg active butten">Sensors</a>
+              </div>
+
+              <div class="col-sm-12">
+                  <br>
+              <a  href="#" class="btn btn-success btn-lg active butten">handrails</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">heat guns</a>
+
+              <a  href="#" class="btn btn-success btn-lg active butten">wrenches</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">meters</a>
+              <a  href="#" class="btn btn-success btn-lg active butten">panels</a><br><br>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+<!-- ************************************categories ends here ******************************* -->
+<!-- ************************************ featured product section ************************* -->
+<div class="container-fluid"style="background: linear-gradient(#f8c291, #ffffff);"><br><br>
+<div class="row">
+        <div class="col-sm-4">
+          <div class="a">
+
+              <h4 style="color: #DB0A5B;">Featured Products:</h4>
+              <div class="product" style="color: #000000;">
+             <a href="#">Product1</a>
+             <a href="#">Product2</a>
+             <a href="#">Product3</a>
+             <a href="#">Product4</a>
+             <a href="#">Product5</a>
+             <a href="#">Product6</a>
+             <a href="#">Product7</a>
+              <br><br>
+            </div>
+          </div></div>
+
+<!-- ************************************* featured product section ends ********************* -->
+<!-- ************************************* Top discounted products *************************** -->
+
+                <div class="col-sm-4">
+                        <div class="a">
+                <h4 style="color: #DB0A5B;">Top Discounted Products:</h4>
+                <div class="product" style="color: #000000;">
+                    <a href="#">Product1</a>
+                    <a href="#">Product2</a>
+                    <a href="#">Product3</a>
+                    <a href="#">Product4</a>
+                    <a href="#">Product5</a>
+                    <a href="#">Product6</a>
+                    <a href="#">Product7</a>
+                  <br><br>
+                </div>
+              </div>
+            </div>
+<!-- ************************************** top discounted product ends *************************** -->
+<!-- ************************************** top merchants starts *********************************** -->
+                <div class="col-sm-4">
+                        <div class="a">
+                  <h4 style="color: #DB0A5B;">Top Merchants:</h4>
+                  <div class="product" style="color: #000000;">
+                    <a href="#">Merchant1</a>
+                    <a href="#">Merchant2</a>
+                    <a href="#">Merchant3</a>
+                    <a href="#">Merchant4</a>
+                    <a href="#">Merchant5</a>
+                    <a href="#">Merchant6</a>
+                    <a href="#">Merchant7</a>
+                    <br><br>
+                  </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+<!-- **************************************** top merchants ends *********************************    -->
+<!-- ********************* move to top ********************************** -->
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-sm-12">
+      <a href="#" class="back-to-top"><span class="glyphicon glyphicon-arrow-up"></span><br>MoveToTop</a>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-sm-12">
+      <a href="#" style="color: black;"><span class="glyphicon glyphicon-arrow-up"><strong>Top</strong></span></a>
+    </div>
+  </div>
+</div>
+<!-- *******************************move to top ends ************************** -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </body>
+</html>

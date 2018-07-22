@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  </head>
+  <body>
+
+      <div class="container" style="background: linear-gradient(#f8c291, #ffffff);">
+
+    <h3><br><br>Submit your list of products and queries!</h3>
+
+      <div id="error"></div><br><br>
+
+      <form action="next.php" method="post" enctype="multipart/form-data">
+  <fieldset class="form-group">
+    <label for="subject">Product Name</label>
+    <input type="text" class="form-control" id="subject" name="subject" >
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="subject">Description</label>
+    <input type="text" class="form-control" id="subject" name="subject" >
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="subject">Estimate Price</label>
+    <input type="text" class="form-control" id="subject" name="subject" >
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="subject">Link</label>
+    <input type="text" class="form-control" id="subject" name="subject" >
+  </fieldset>
+  <fieldset>
+        <label for="image">Image:</label>
+        <input type="blob" name="image" id="image" />
+        <input type="submit" name="submit" value="input" />
+  </fieldset>
+  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+        </div>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+
+          $("form").submit(function(e) {
+
+              var error = "";
+
+              if ($("#email").val() == "") {
+
+                  error += "The email field is required.<br>"
+
+              }
+
+              if ($("#subject").val() == "") {
+
+                  error += "The subject field is required.<br>"
+
+              }
+
+              if ($("#content").val() == "") {
+
+                  error += "The content field is required.<br>"
+
+              }
+
+              if (error != "") {
+
+                 $("#error").html('<div class="alert alert-danger" role="alert"><p><strong>There were error(s) in your form:</strong></p>' + error + '</div>');
+
+                  return false;
+
+              } else {
+
+                  return true;
+
+              }
+          })
+
+    </script>
+
+  </body>
+</html>

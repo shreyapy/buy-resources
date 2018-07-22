@@ -1,0 +1,173 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    padding-top:100px;
+}
+
+body,
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+h3{
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    
+}
+
+#content{
+    min-height: 600px;
+    background-color: #E4F1FE
+}
+
+#banner_image {
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/intro-bg_1.jpg) no-repeat center center;
+    background-size: cover;
+}
+#parallax{
+  background: url(../img/Loyal_Customers_v2.jpg) no-repeat center center;
+  background-size: cover;
+  /* for parallax ******* */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner_content {
+    position: relative;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 660px;
+}
+
+#item_list {
+    padding-top: 50px;
+}
+
+/*This code ensures that when we navigate to a particular section of a page, the section does not get lost behind the header*/
+#cameras:before, #watches:before, #shirts:before{
+    display: block;
+    content: " ";
+    margin-top: -85px;
+    height: 85px;
+    visibility: hidden;
+}
+
+
+#login-panel .panel-footer{
+    font-weight:normal;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #101010;
+    color:#9d9d9d;
+    bottom: 0;
+    width: 100%;
+}
+
+.red{
+    color:red;
+}
+
+#settings-container{
+    margin-bottom:10px;
+}
+
+.navbar-brand{
+    font-size:20px;
+}
+
+@media(max-width:768px) {
+    #banner_content {
+        padding-bottom: 15%;
+    }
+    footer{
+        text-align:left;
+    }
+}
+
+.remove_item_link{
+    color:#0000ff;
+}
+
+.back-to-top {
+  background: none;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  display: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.back-to-top i {
+  font-size: 60px;
+}
+.products{
+  background-color: rgba(0, 0, 0, 0.7);
+  letter-spacing: inherit;
+  height: 80px;
+  width: 100%;
+}
+.customer{
+  background-image: url("../img/masteringTheVerticals.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+.cust_content{
+  background-color: rgb(242, 242, 242);
+
+}
+.b{
+    
+        width: 900px;
+        border: 5px solid;
+        padding: 10px;
+        margin: auto;
+        box-shadow: 10px 10px 5px grey;
+    
+}
+.butten{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+}
+.butten:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+.butten:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.a {
+    width: 390px;
+    height: auto;
+    padding: 15px;
+    border: 5px solid;
+    text-align: center;
+    
+}

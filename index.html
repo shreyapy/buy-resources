@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Welcome | Buy Resources</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="/js/main.js">
+        <link rel=”stylesheet” id=”font-awesome-css” href=”//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css” type=”text/css” media=”screen”>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!--=================code for cookies ===============================-->
+        <script>
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your E-mail id:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+</script>
+        <!--=================code for cookies ends ===============================-->
+
+    </head>
+
+    <body style="padding-top: 50px;">
+<!--===================checking for cookie =================-->
+      <body onload="checkCookie()">
+<!--===================checking for cookie ends=================-->
+
+
+        <div id="content">
+<!-- ********************************* Main banner image *****************************************-->
+            <div id = "banner_image">
+                <div class="container">
+                    <center>
+                        <div id="banner_content">
+                            <h1>Sign In As:</h1>
+                            <br/>
+                            <a  href="level21.html" class="btn btn-danger btn-lg active">AS CUSTOMER</a>
+                            <a  href="#" class="btn btn-danger btn-lg active">AS MERCHANT</a>
+                            <a  href="#" class="btn btn-danger btn-lg active">AS AFFILIATE</a>
+                        </div>
+                    </center>
+                </div>
+            </div>
+<!-- ****************************Main banner image end *********************************************-->
+            <br><br>
+<!-- *************************Item categories listing ******************************************-->
+          <div class="container-fluid">
+            <div class="row text-center">
+              <div class="col-sm-12">
+                  <br><br>
+                <div class="container-fluid">
+                  <div class="row text-center">
+                    <div class="container-fluid">
+                      <div class="row text-center">
+                        <div class="col-sm-12">
+                          <a href="#" style="color: #000000;"><h1><em><strong>What's In It Here?</stong></em></h1></a>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="b">
+                        <div class="container-fluid cust_content">
+                          <div class="row text-center">
+                            <div class="col-sm-12">
+
+                      <a href="level21.html"><h3>For Customers:</h3></a>
+
+                        <p>We offer you unlimited Products!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br><br>
+                <div class="b">
+              <div class="container-fluid cust_content">
+                <div class="row text-center">
+                  <div class="col-sm-12">
+                    <a href="level21.html"><h3>For Merchants:</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                       Ut enim ad minim veniam, quis nostrud exercitation ullamco l
+                       aboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                       irure dolor in reprehenderit in voluptate velit esse ci
+                       llum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserun
+                        t mollit anim id est laborum.</p>
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quae, debitis neque esse natus repellat velit, voluptatem temporibus quod at, sint doloribus. Similique labore asperiores, unde, illo reiciendis maiores ullam.</span><span>Mollitia sed aliquam ipsa necessitatibus totam unde sit numquam in omnis incidunt, magni vel voluptas consequatur dolores at earum aspernatur, fugit rem nihil culpa. Id, repellat, voluptatem. Maiores, assumenda, itaque.</span></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+                <br><br>
+                <div class="b">
+              <div class="container-fluid cust_content">
+                <div class="row text-center">
+                  <div class="col-sm-12">
+                    <a href="level21.html"><h3>For Affiliate:</h3></a>
+                    <p>Our choice: <a href="https://affiliate-program.amazon.com/">Amazon Affiliates</a><br><a href="https://www.google.com/adsense/start/#/?modal_active=none">Google Adsense</a>
+                    <br><a href="www.cj.com">Commision Junction</a></p>
+                    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quae, debitis neque esse natus repellat velit, voluptatem temporibus quod at, sint doloribus. Similique labore asperiores, unde, illo reiciendis maiores ullam.</span><span>Mollitia sed aliquam ipsa necessitatibus totam unde sit numquam in omnis incidunt, magni vel voluptas consequatur dolores at earum aspernatur, fugit rem nihil culpa. Id, repellat, voluptatem. Maiores, assumenda, itaque.</span></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <br>
+<!-- ********************* move to top ********************************** -->
+            <div class="container-fluid">
+              <div class="row text-center">
+                <div class="col-sm-12">
+                  <a href="#" class="back-to-top"><span class="glyphicon glyphicon-arrow-up"></span><br>Top</a>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row text-center">
+                <div class="col-sm-12">
+                  <a href="#" style="color: black;"><span class="glyphicon glyphicon-arrow-up"><strong>MoveToTop</strong></span></a>
+                </div>
+              </div>
+            </div>
+
+<!-- *******************************move to top ends ************************** -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </body>
+</html>
