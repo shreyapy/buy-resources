@@ -11,7 +11,7 @@ if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO ecommerce(pname, pdescription, estamnt, plink, pimage)
+$sql = "INSERT INTO affiliate(pname, pdescription, estamnt, plink, pimage)
 VALUES ('dsdbc', 'dscbdh', 1213, "www.amazon.com", );";
 
 if ($conn->multi_query($sql) === TRUE) {
